@@ -1,3 +1,4 @@
+/* eslint-disable react/state-in-constructor */
 import React from 'react';
 import { Clock } from './Clock';
 
@@ -38,7 +39,7 @@ export class App extends React.Component<{}, AppState> {
     }, 3300);
   }
 
-  componentDidUpdate(prevProps: {}, prevState: AppState) {
+  componentDidUpdate(_prevProps: {}, prevState: AppState) {
     if (prevState.clockName !== this.state.clockName) {
       // eslint-disable-next-line no-console
       console.warn(
